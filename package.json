@@ -1,0 +1,44 @@
+{
+  "name": "plyr-desktop",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^28.2.2",
+    "electron-packager": "^17.1.2",
+    "jsmediatags": "^3.9.7"
+  },
+  "win": {
+    "target": [
+      "nsis"
+    ]
+  },
+  "build": {
+    "fileAssociations": [
+      {
+        "ext": [
+          "mp4",
+          "mp3"
+        ],
+        "name": "Video and Audio File",
+        "perMachine": true
+      }
+    ],
+    "nsis": {
+      "oneClick": true,
+      "perMachine": true
+    }
+  },
+  "fileAssociations": {
+    "ext": "mp4",
+    "name": "Video and Audio File",
+    "perMachine": true
+  },
+  "nsis": {
+    "oneClick": true,
+    "perMachine": true
+  }
+}
