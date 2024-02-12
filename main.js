@@ -9,7 +9,8 @@ function createWindow() {
             preload: path.join(__dirname, 'src/javascript/preload.js'),
         }
     })
-    mainWindow.webContents.openDevTools();
+
+    // mainWindow.webContents.openDevTools();
     mainWindow.setMenu(null)
 
 
