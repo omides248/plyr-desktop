@@ -9,7 +9,8 @@
   "dependencies": {
     "electron": "^28.2.2",
     "electron-packager": "^17.1.2",
-    "jsmediatags": "^3.9.7"
+    "jsmediatags": "^3.9.7",
+    "plyr": "^3.7.8"
   },
   "win": {
     "target": [

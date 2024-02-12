@@ -44,8 +44,8 @@ app.whenReady().then(() => {
 
         console.log(5555555555555)
         openFilePath = process.argv[1];
-        // openFilePath = "D:\\projects\\plyr-desktop\\dist\\a.mp4"
-        // openFilePath = "D:\\projects\\plyr-desktop\\dist\\b.mp4"
+        // openFilePath = "D:\\projects\\plyr-desktop\\test\\a.mp4"
+        // openFilePath = "D:\\projects\\plyr-desktop\\test\\b.mp4"
         // openFilePath = "D:\\Music and Film and Picture\\new music\\Eminem - Mockingbird [Official Music Video].mp3"
         mainWindow.webContents.send('target', openFilePath)
         mainWindow.maximize()
