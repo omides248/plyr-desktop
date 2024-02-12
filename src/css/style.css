@@ -1,0 +1,22 @@
+body, html {
+    display: flex;
+}
+
+body {
+    margin: 0 auto;
+    min-height: 100%;
+    font-family: Gordita, Avenir, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+html {
+    background: linear-gradient(to left top, #e0f6ff, #f5fcff);
+    background-attachment: fixed;
+    height: 100%;
+    background: black;
+}
+
+.plyr {
+    position: unset;
+}

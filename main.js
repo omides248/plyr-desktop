@@ -6,10 +6,10 @@ let mainWindow
 function createWindow() {
     mainWindow = new BrowserWindow({
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js'),
+            preload: path.join(__dirname, 'src/javascript/preload.js'),
         }
     })
-    // mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
     mainWindow.setMenu(null)
 
 
@@ -26,8 +26,7 @@ function createWindow() {
 
     })
 
-    mainWindow.loadFile('index2.html')
-
+    mainWindow.loadFile('index.html')
 
 }
 
@@ -40,23 +39,20 @@ app.whenReady().then(() => {
         if (BrowserWindow.getAllWindows().length === 0) createWindow()
     })
 
+
     if (process.platform === "win32" && process.argv.length >= 2) {
 
-        console.log(5555555555555)
         openFilePath = process.argv[1];
         // openFilePath = "D:\\projects\\plyr-desktop\\test\\a.mp4"
         // openFilePath = "D:\\projects\\plyr-desktop\\test\\b.mp4"
         // openFilePath = "D:\\Music and Film and Picture\\new music\\Eminem - Mockingbird [Official Music Video].mp3"
-        mainWindow.webContents.send('target', openFilePath)
-        mainWindow.maximize()
-        // win.webContents.send('target', "23123123123123123")
-        // ipcMain.send('store-data', "123123213213213");
-        // const fs = require('fs');
-        // try {
-        //     fs.writeFileSync('C:\\Users\\omid.esmaeili\\Desktop\\myfile2321323.txt', openFilePath, 'utf-8');
-        // } catch (e) {
-        //     alert('Failed to save the file !');
-        // }
+        if (openFilePath) {
+            console.log(1111111111111)
+            mainWindow.webContents.send('video-src', openFilePath)
+            mainWindow.maximize()
+        }
+
+        // test_send_data()
     }
 
 
@@ -67,4 +63,13 @@ app.on('window-all-closed', function () {
 })
 
 
-
+function test_send_data() {
+    // win.webContents.send('target', "23123123123123123")
+    // ipcMain.send('store-data', "123123213213213");
+    // const fs = require('fs');
+    // try {
+    //     fs.writeFileSync('C:\\Users\\omid.esmaeili\\Desktop\\myfile2321323.txt', openFilePath, 'utf-8');
+    // } catch (e) {
+    //     alert('Failed to save the file !');
+    // }
+}
