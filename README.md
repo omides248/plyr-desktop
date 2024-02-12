@@ -1,3 +1,14 @@
+<h1>Plyr Desktop</h1>
+
+<br/>
+
+<p>This player for windows base Plyr library</p>
+<p>Support limited to html video.</p>
+
+<br/>
+<br/>
+<br/>
+
 <img width="959" alt="image" src="https://github.com/omides248/plyr-desktop/assets/37228870/74383d58-73b4-4c9f-ade0-76394e774edc">
 
 
