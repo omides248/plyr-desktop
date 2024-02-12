@@ -48,7 +48,6 @@ app.whenReady().then(() => {
         // openFilePath = "D:\\projects\\plyr-desktop\\test\\b.mp4"
         // openFilePath = "D:\\Music and Film and Picture\\new music\\Eminem - Mockingbird [Official Music Video].mp3"
         if (openFilePath) {
-            console.log(1111111111111)
             mainWindow.webContents.send('video-src', openFilePath)
             mainWindow.maximize()
         }
