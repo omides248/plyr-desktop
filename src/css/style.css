@@ -19,3 +19,18 @@ html {
 .plyr {
     position: unset;
 }
+
+.plyr__poster {
+    position: fixed;
+}
+
+
+/*#player {*/
+/*    background-image: url(../../test/poster2.png);*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 35%;*/
+/*    left: 83%;*/
+/*    position: absolute;*/
+/*    top: 94%;*/
+/*    transform: translate(-50%,-50%);*/
+/*}*/

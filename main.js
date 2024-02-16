@@ -13,6 +13,12 @@ function createWindow() {
     // mainWindow.webContents.openDevTools();
     mainWindow.setMenu(null)
 
+    // mainWindow.on('show', () => {
+    //     setTimeout(() => {
+    //         mainWindow.focus()
+    //     }, 200)
+    // })
+
 
     ipcMain.on('init-resize', (event, width, height) => {
         const webContents = event.sender
@@ -50,6 +56,7 @@ app.whenReady().then(() => {
         if (openFilePath) {
             mainWindow.webContents.send('video-src', openFilePath)
             mainWindow.maximize()
+            // mainWindow.focus()
         }
 
         // test_send_data()
